@@ -1,4 +1,5 @@
 import { getCollections } from "app/services/shopify/collections";
+import styles from "./StoreLayout.module.sass";
 import Link from "next/link";
 
 export default async function Layout({
@@ -8,13 +9,20 @@ export default async function Layout({
 }) {
   const collections = await getCollections();
   return (
-    <main>
+    <main className={styles.StoreLayout}>
+      <h1>Explore</h1>
       <nav>
-        {collections.map((collection: SmartCollection) => (
-          <Link key={collection.id} href={"store/" + collection.handle}>
-            {collection.title}
-          </Link>
-        ))}
+        <ul className={styles.StoreLayout__list}>
+          {collections.map((collection: SmartCollection) => (
+            <Link
+              key={collection.id}
+              href={"/store/" + collection.handle}
+              className={styles.StoreLayout__chip}
+            >
+              {collection.title}
+            </Link>
+          ))}
+        </ul>
       </nav>
       {children}
     </main>
