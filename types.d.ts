@@ -52,3 +52,25 @@ interface Product {
     variant_ids: number[];
   };
 }
+
+interface SmartCollection {
+  id: number;
+  handle: string;
+  title: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  published_at: string;
+  updated_at: string;
+  rules: {
+    column: string;
+    relation: string;
+    condition: string;
+  }[];
+  disjunctive: boolean;
+  sort_order: string;
+  template_suffix: string | null;
+  admin_graphql_api_id: string;
+}
