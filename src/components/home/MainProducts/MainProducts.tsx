@@ -13,7 +13,7 @@ export const MainProducts = async () => {
     <section className={styles.MainProducts}>
       <h3>✨ New products released!</h3>
       <div className={styles.MainProducts__grid}>
-        {products?.map((product: Product) => {
+        {products?.map((product: any) => {
           const imageSrc = product.image.src;
           return (
             <article key={product.id}>
