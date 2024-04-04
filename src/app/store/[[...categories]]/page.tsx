@@ -1,4 +1,4 @@
-import { ProductsWrapper } from "app/components/shared/Store/ProductWrapper";
+import { ProductsWrapper } from "app/components/Store/ProductWrapper";
 import {
   getCollectionProducts,
   getCollections,
