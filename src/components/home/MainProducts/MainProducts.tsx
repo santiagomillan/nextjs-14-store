@@ -5,10 +5,6 @@ import { getMainProducts } from "app/services/shopify/products";
 export const MainProducts = async () => {
   const products = await getMainProducts();
 
-  console.log("products", products);
-  // const response = await fetch("http://localhost:3000/api");
-  // const { products } = await response.json();
-
   return (
     <section className={styles.MainProducts}>
       <h3>✨ New products released!</h3>
