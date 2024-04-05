@@ -1,6 +1,5 @@
 import { env } from "app/config/env";
 import { shopifyUrl } from "./urls";
-import { url } from "inspector";
 
 export const getProducts = async (id?: string): Promise<ProductType[]> => {
   try {
