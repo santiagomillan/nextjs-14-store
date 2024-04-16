@@ -74,3 +74,10 @@ interface SmartCollection {
   template_suffix: string | null;
   admin_graphql_api_id: string;
 }
+
+type CartItem = {
+  title: string;
+  price: number;
+  quantity: number;
+  id: string;
+};
