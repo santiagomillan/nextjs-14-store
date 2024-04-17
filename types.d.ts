@@ -12,6 +12,7 @@ type ProductType = {
   quantity: number;
   handle: string;
   tags: string;
+  gql_id: string;
 };
 
 interface Product {
@@ -80,4 +81,6 @@ type CartItem = {
   price: number;
   quantity: number;
   id: string;
+  image: string;
+  merchandiseId: string;
 };
